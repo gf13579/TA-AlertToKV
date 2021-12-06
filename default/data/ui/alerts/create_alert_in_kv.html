@@ -3,18 +3,84 @@
         <label class="control-label" for="create_alert_in_kv_app">App <span class="required">*</span> </label>
         <div class="controls">
         <input type="text" name="action.create_alert_in_kv.param.app" id="create_alert_in_kv_app"/>
+        <span class="help-block">
+            The app containing the target collection
+        </span>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label" for="create_alert_in_kv_name">Collection Name <span class="required">*</span> </label>
+        <label class="control-label" for="create_alert_in_kv_collection">Collection Name <span class="required">*</span> </label>
         <div class="controls">
-        <input type="text" name="action.create_alert_in_kv.param.kv_name" id="create_alert_in_kv_kv_name"/>
+        <input type="text" name="action.create_alert_in_kv.param.kv_collection" id="create_alert_in_kv_kv_collection"/>
+        <span class="help-block">
+            The target collection name
+        </span>
         </div>
     </div>
-    <div class="control-group">
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_severity">Collection Owner </span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.kv_severity" id="create_alert_in_kv_severity"/>
+    <span class="help-block">
+        The target collection owner. Defaults to 'nobody' if not provided
+    </span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_time">Time <span class="required">*</span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.kv_time" id="create_alert_in_kv_time"/>
+    <span class="help-block">
+        The time of the alert (or the underlying event) e.g. $result._time$
+    </span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_alert_title">Collection alert_title <span class="required">*</span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.kv_alert_title" id="create_alert_in_kv_alert_title"/>
+    <span class="help-block">
+        The title of the alert, which could be parameterised
+    </span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_search_name">Search Name <span class="required">*</span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.kv_search_name" id="create_alert_in_kv_search_name"/>
+    <span class="help-block">
+        The search name that triggered the alert
+    </span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_severity">Severity <span class="required">*</span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.kv_severity" id="create_alert_in_kv_severity"/>
+    <span class="help-block">
+        The severity associated with the alert
+    </span>
+    </div>
+</div>
+<div class="control-group">
         <label class="control-label" for="create_alert_in_kv_data">Data <span class="required">*</span> </label>
         <div class="controls">
         <input type="text" name="action.create_alert_in_kv.param.data" id="create_alert_in_kv_data"/>
+            <span class="help-block">
+                The event fields as a json string, potentially formed using the tojson command
+            </span>
         </div>
     </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="create_alert_in_kv_metadata">Metadata </span> </label>
+    <div class="controls">
+    <input type="text" name="action.create_alert_in_kv.param.metadata" id="create_alert_in_kv_metadata"/>
+        <span class="help-block">
+            Additional alert status fields as a json string, potentially formed using the tojson command
+        </span>
+    </div>
+</div>
 </form>
+

@@ -13,7 +13,9 @@ param.search_name = <string>
 * The search name that triggered the alert
 param.severity = <string>
 * The severity associated with the alert
-param.data = <string>
-* The event fields as a json string, potentially formed using the tojson command
+# param.data = <string>
+# * The event fields as a json string, potentially formed using the tojson command
+param.jsonify = <string>
+* If true, all event fields will be written as json to a single kv field called 'data'
 param.metadata = <string>
 * Additional alert status fields as a json string, potentially formed using the tojson command

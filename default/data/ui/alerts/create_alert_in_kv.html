@@ -52,18 +52,18 @@
     <div class="control-group">
         <label class="control-label" for="create_alert_in_kv_severity">Severity <span class="required">*</span> </label>
         <div class="controls">
-            <input type="text" name="action.create_alert_in_kv.param.severity" id="create_alert_in_kv_severity" />
+            <input type="text" name="action.create_alert_in_kv.param.severity" id="create_alert_in_kv_severity" placeholder="Medium"/>
             <span class="help-block">
                 The severity associated with the alert
             </span>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label" for="create_alert_in_kv_data">Data <span class="required">*</span> </label>
+        <label class="control-label" for="create_alert_in_kv_jsonify">Data <span class="required">*</span> </label>
         <div class="controls">
-            <input type="text" name="action.create_alert_in_kv.param.data" id="create_alert_in_kv_data" />
+            <input type="checkbox" name="action.create_alert_in_kv.param.jsonify" id="create_alert_in_kv_jsonify" />
             <span class="help-block">
-                The event data e.g. $result.data$, potentially formed using the tojson command e.g. '| tojson | rename _raw as data'
+                If checked, all event fields will be written as json to a single kv field called 'data'
             </span>
         </div>
     </div>

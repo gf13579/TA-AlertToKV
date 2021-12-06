@@ -5,7 +5,7 @@
             "name": "Splunk Enterprise: Python Debugger",
             "type": "python",
             "request": "attach",
-            "port": 5508,
+            "port": 5973,
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}",

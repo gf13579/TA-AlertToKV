@@ -16,7 +16,9 @@ Using this App
 
 Install the app. Setup a new KV - or pick an existing one to use. Configure a Splunk alert to use the newly-available action.
 
-I recommend using `| table a, b, c | tojson` to store all required fields in a single text (json) field that will be written to the `data` value in the KV.
+If your collection has the following fields, they will be populated: _time, alert_title, data (see below), metadata, search_name severity.
+
+Choose whether to store the event data using the fields from your search results (e.g. `| table a b c`) or to render all of the event data as a single json string in a kv field called `data`. If doing the latter, you can unpack the json at search time using `| inputlookup your_lookup | eval _raw=data | spath | fields - _raw, data`
 
 Mandatory parameters to the action include:
 - collection
@@ -24,11 +26,8 @@ Mandatory parameters to the action include:
 - owner
 
 Optional parameters:
-- _time
 - alert_title
-- search_name
 - severity
-- data
 - metadata
 
-The `metadata` field is intended to store additional arbitrary fields to describe the status of the alert e.g. `{"status": "open", "escalated": False}`.
+The `metadata` field is intended to support additional arbitrary fields to describe the status of the alert e.g. `{"status": "open", "escalated": False}`.

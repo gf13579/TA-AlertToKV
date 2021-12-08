@@ -1,18 +1,14 @@
-TA-AlertToKV
-----------------------------
+# TA-AlertToKV
 
-       Original author: Greg Ford
-       Current maintainer: Greg Ford
-       Version: 0.0.1
+Author: Greg Ford
 
-Update History
-----------------------------
-       0.0.1 Dec 6, 2021
-       --------
-       First version
+## Update History
 
-Using this App
-----------------------------
+| Version | Date        | Comments      |
+| ------- | ----------- | ------------- |
+| 0.0.1   | Dec 6, 2021 | First version |
+
+## Using this App
 
 Install the app. Setup a new KV - or pick an existing one to use. Configure a Splunk alert to use the newly-available action.
 

@@ -27,3 +27,26 @@ Optional parameters:
 - metadata
 
 The `metadata` field is intended to support additional arbitrary fields to describe the status of the alert e.g. `{"status": "open", "escalated": False}`.
+
+## KV Collection Definition
+
+Recommended alert KV definition for collections.conf:
+
+```conf
+[acme_alert_kv]
+field._time = time
+field.alert_title = string
+field.data = string
+field.search_name = string
+field.severity = string
+field.metadata = string
+```
+
+Recommended lookup definition for transforms.conf:
+
+```conf
+[acme_alert_kv_lookup]
+collection = sc_alert_kv
+external_type = kvstore
+fields_list = _time,alert_title,data,metadata,search_name,severity,_key
+```

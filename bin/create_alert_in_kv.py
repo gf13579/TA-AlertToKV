@@ -78,7 +78,7 @@ with gzip.open(results_file, "rt") as zip_file:
 msg = f"dicts_to_add is {str(dicts_to_add)}"
 logger.log("DEBUG", msg)
 
-# If we're storing all fields in one kv field - as a json strong
+# If we're storing all fields in one kv field - as a json string
 if storage_format == "json":
     json_dicts_to_add = []
     for d in dicts_to_add:

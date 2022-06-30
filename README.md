@@ -4,9 +4,10 @@ Author: Greg Ford
 
 ## Update History
 
-| Version | Date        | Comments      |
-| ------- | ----------- | ------------- |
-| 0.0.1   | Dec 6, 2021 | First version |
+| Version | Date         | Comments       |
+| ------- | ------------ | -------------- |
+| 0.0.1   | Dec 6, 2021  | First version  |
+| 0.0.2   | May 23, 2022 | Logging. Fixes |
 
 ## Using this App
 
@@ -50,3 +51,24 @@ collection = sc_alert_kv
 external_type = kvstore
 fields_list = _time,alert_title,data,metadata,search_name,severity,_key
 ```
+
+## Troubleshooting
+
+High level error messages:
+
+```
+index=_internal sendmodalert
+```
+
+App-level error messages:
+
+```
+index=_internal source="*/ta-alerttokv.log"
+```
+
+To create a test alert - and send detailed error messages to search.log:
+
+```
+| makeresults | sendalert create_alert_in_kv param.collection=your_kv param.app=your_app param.owner=Nobody param.storage_format=json
+```
+
